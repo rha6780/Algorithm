@@ -1,20 +1,20 @@
-from sys import stdin
+import sys
 
-n = stdin.readline().rstrip()
-card = list(map(int,stdin.readline().split()))
-m = stdin.readline().rstrip()
-test = list(map(int,stdin.readline().split()))
+if __name__ == '__main__':
+    N = int(sys.stdin.readline())
+    cards = list(map(int, sys.stdin.readline().split()))
+    M = int(sys.stdin.readline())
+    questions = list(map(int, sys.stdin.readline().split()))
+    counts = {}
 
-hash = {}
+    for i in cards:
+        if i not in counts:
+            counts[i] = 1
+        else:
+            counts[i] += 1
 
-for i in card:
-    if i in hash:
-        hash[i] += 1
-    else:
-        hash[i] = 1
-
-for i in test:
-    if i in hash:
-        print(hash[i], end=' ')
-    else:
-        print(0, end=' ')
+    for i in questions:
+        if i in counts:
+            print(counts[i], end=' ')
+        else:
+            print(0, end=' ')
