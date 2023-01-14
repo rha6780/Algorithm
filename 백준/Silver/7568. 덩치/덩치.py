@@ -12,8 +12,8 @@ if __name__ == '__main__':
             if nums[i][0] < nums[j][0] and nums[i][1] < nums[j][1]:
                 grade[i] += 1
 
-    grades = sorted(grade)
-    grades = list(grades)
+    # grades = sorted(grade)
+    # grades = list(grades)
     result = ''
     for i in grade:
         result += str(i+1) + ' '
