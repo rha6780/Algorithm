@@ -1,14 +1,14 @@
-# [Silver II] 카드 합체 놀이 - 15903 
+# [Silver I] 카드 합체 놀이 - 15903 
 
 [문제 링크](https://www.acmicpc.net/problem/15903) 
 
 ### 성능 요약
 
-메모리: 19592 KB, 시간: 244 ms
+메모리: 21704 KB, 시간: 332 ms
 
 ### 분류
 
-자료 구조(data_structures), 그리디 알고리즘(greedy), 우선순위 큐(priority_queue)
+자료 구조, 그리디 알고리즘, 우선순위 큐
 
 ### 문제 설명
 
