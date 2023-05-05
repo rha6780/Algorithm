@@ -7,17 +7,15 @@ public class Main {
     public static long mod = 1_000_000_007;
 
     public static long exponent(long value, long ex) {
-        long result = 1;
-        while (ex > 0) {
+        if (ex == 0) {
+            return 1;
+        } else {
+            long tmp = exponent(value, ex / 2);
             if (ex % 2 == 1) {
-                result *= value;
-                result %= mod;
+                return (((tmp * tmp) % mod) * value) % mod;
             }
-            value = (value * value) % mod;
-            ex /= 2;
+            return (tmp * tmp) % mod;
         }
-
-        return result % mod;
     }
 
     public static void main(String[] args) throws IOException {
